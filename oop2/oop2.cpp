@@ -33,8 +33,11 @@ public:
 };
 int main()
 {
-	Human h1;
-	Human h2("Denis", 20);
-	Human h3(h2);
+	Human* h1 = new Human;
+	Human* h2 = new Human("Denis", 20);
+	Human* h3 = new Human(*h2);
+	delete h1;
+	delete h2;
+	delete h3;
 
 }
